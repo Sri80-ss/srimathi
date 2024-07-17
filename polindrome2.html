@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function checkPalindrome() {
+            var num = document.getElementById("N").value;
+            var result = document.getElementById("result");
+            var len = num.length;
+            for (var i = 0; i < len / 2; i++) {
+                if (num[i] !== num[len - 1 - i]) {
+                    result.textContent = "The input is not a palindrome.";
+                    return;
+                }
+                else {
+                    result.textContent = "The input number or string is a palindrome.";
+        }
+                }
+            }
+           
+    </script>
+
+</head>
+<body>
+    <h1>Check if a number or string is a Palindrome</h1>
+    Enter The Number or string: <input type="text" name="n" id="N"/>
+    <button onclick="checkPalindrome()">CHECK</button>
+    <p id="result"></p>
+</body>
+</html>
